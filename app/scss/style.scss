@@ -290,6 +290,7 @@
 
 .product-slider {
   padding: 123px 0 121px;
+  font-family: 'Roboto', sans-serif;
 
   .products__item {
     margin-bottom: 67px;
@@ -312,7 +313,7 @@
       height: 16px;
       border: none;
       cursor: pointer;
-      outline: none;
+      outline: none ;
     }
     .slick-active {
       button {
@@ -324,3 +325,60 @@
 }
 
 //end product-slider
+
+//start advantages
+
+.advantages {
+  background-color: $bg;
+  padding: 124px 0 118px;
+  &__title {
+    color: #fff;
+    margin-bottom: 83px;
+  }
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    &-img {
+      background-color: #fff;
+      border-radius: 50%;
+      width: 113px;
+      height: 113px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 33px;
+      &--green {
+        background-color: $green;
+      }
+    }
+    &-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 26px;
+      &--green {
+        color: $green;
+      }
+    }
+    &-text {
+      text-align: center;
+      color: #b0bec5;
+    }
+  }
+}
+
+//end advantages
+
+//start author
+
+
+
+//end author
