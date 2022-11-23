@@ -422,6 +422,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &__box {
     background-color: $green;
     max-width: 655px;
@@ -431,16 +432,19 @@
     align-items: center;
     justify-content: center;
   }
+
   &__title {
     font-size: 30px;
     line-height: 36px;
     color: #fff;
     margin-right: 45px;
     max-width: 260px;
+
     span {
       @include f700;
     }
   }
+
   &__link {
     font-size: 18px;
     line-height: 36px;
@@ -459,10 +463,12 @@
 .tutorial {
   padding: 60px 0 120px;
   @include f700;
+
   &__inner {
     display: flex;
     justify-content: space-between;
   }
+
   &__item {
     max-width: 370px;
     width: 100%;
@@ -477,6 +483,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   &-name {
     font-size: 24px;
     text-align: center;
@@ -486,3 +493,179 @@
 }
 
 //end tutorial
+
+//start footer
+
+.footer {
+  background-color: $bg;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 116px 0 100px;
+  }
+}
+
+.footer__col {
+  max-width: 270px;
+  width: 100%;
+
+  &-menu {
+    max-width: 220px;
+  }
+
+  &-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    color: #fff;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      bottom: 0;
+      height: 3px;
+      width: 51px;
+      background-color: $green;
+    }
+  }
+
+  &-text {
+    color: #b7c3c8;
+    margin-bottom: 36px;
+  }
+}
+
+.footer__info {
+  margin-top: 18px;
+  @include f500;
+  color: #fff;
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    content: "\f041";
+    font-family: 'icomoon';
+    color: $green;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.footer__info--phone {
+  &::before {
+    content: "\f095";
+  }
+}
+
+.footer__col-list {
+  a {
+    color: #b7c3c8;
+    margin-bottom: 15px;
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+      font-family: 'icomoon';
+      content: "\f105";
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+      color: $green;
+    }
+  }
+}
+
+.footer__copy {
+  border-top: 1px solid #424d53;
+
+  &-text {
+    text-align: center;
+    color: #919699;
+    padding: 27px 0 32px;
+  }
+}
+
+.footer__social-link {
+  margin-bottom: 33px;
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 7px;
+    }
+  }
+  a {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/css_sprites.png);
+  }
+}
+
+.link-twitter {
+  background-position: 0 -28px;
+}
+
+.link-youtube {
+  background-position: -28px -28px;
+}
+
+.link-pinterest {
+  background-position: -56px 0px;
+}
+
+.link-linkedin {
+  background-position: -28px 0;
+}
+
+.footer__form {
+  position: relative;
+  &-title {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  input {
+    border: none;
+    background-color: #2f3c43;
+    width: 100%;
+    display: block;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 50px;
+    &::placeholder {
+      color: #697378;
+    }
+  }
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $green;
+    width: 43px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    &::before {
+      content: "\f124";
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 20px;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+
+
+//end footer
