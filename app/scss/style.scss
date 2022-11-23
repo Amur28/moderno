@@ -424,9 +424,9 @@
   align-items: center;
   &__box {
     background-color: $green;
-    max-width: 653px;
+    max-width: 655px;
     width: 100%;
-    min-height: 216px;
+    min-height: 215px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,3 +453,36 @@
 }
 
 //end author
+
+//start tutorial
+
+.tutorial {
+  padding: 60px 0 120px;
+  @include f700;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    background-color: #f8f8f8;
+  }
+}
+
+.tutorial__item {
+  &-img {
+    min-height: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-name {
+    font-size: 24px;
+    text-align: center;
+    color: $bg;
+    padding: 40px 10px;
+  }
+}
+
+//end tutorial
