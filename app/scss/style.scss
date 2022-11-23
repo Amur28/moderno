@@ -79,14 +79,14 @@
   color: #fff;
 
   &-title {
-    font-weight: 700;
+    @include f700;
     font-size: 48px;
     line-height: 1;
     margin-bottom: 34px;
   }
 
   &-text {
-    font-weight: 500;
+    @include f500;
     font-size: 20px;
     line-height: 1;
     margin-bottom: 54px;
@@ -106,7 +106,7 @@
       border: none;
       font-size: 14px;
       line-height: 30px;
-      font-weight: 500;
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
       outline: none;
@@ -118,7 +118,6 @@
       &::placeholder {
         color: #90a4ae;
         letter-spacing: 0.05em;
-        font-weight: 500;
       }
     }
 
@@ -197,7 +196,7 @@
     align-items: center;
     padding: 10px 30px;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
     ;
   }
@@ -220,7 +219,7 @@
 
   &-price {
     font-size: 20px;
-    font-weight: 700;
+    @include f700;
   }
 
   &-info {
@@ -313,15 +312,16 @@
       height: 16px;
       border: none;
       cursor: pointer;
-      outline: none ;
+      outline: none;
     }
+
     .slick-active {
       button {
         background: $green;
       }
     }
   }
-  
+
 }
 
 //end product-slider
@@ -331,6 +331,7 @@
 .advantages {
   background-color: $bg;
   padding: 124px 0 118px;
+
   &__title {
     color: #fff;
     margin-bottom: 83px;
@@ -340,11 +341,27 @@
 .advantages__inner {
   display: flex;
   justify-content: space-between;
+
   .advantages__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 320px;
+    max-width: 370px;
+
+    &:hover {
+      .advantages__item-img {
+        background-color: $green;
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      .advantages__item-title {
+        color: $green;
+      }
+    }
+
     &-img {
       background-color: #fff;
       border-radius: 50%;
@@ -354,20 +371,17 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 33px;
-      &--green {
-        background-color: $green;
-      }
+      transition: all .5s;
     }
+
     &-title {
       font-size: 24px;
-      font-weight: 500;
       color: #fff;
-      font-family: 'Roboto', sans-serif;
       margin-bottom: 26px;
-      &--green {
-        color: $green;
-      }
+      @include f500;
+      transition: all .5s;
     }
+
     &-text {
       text-align: center;
       color: #b0bec5;
@@ -375,10 +389,67 @@
   }
 }
 
+.icosvg-1 {
+  svg {
+    width: 50px;
+    height: 67px;
+  }
+}
+
+.icosvg-2 {
+  svg {
+    width: 71px;
+    height: 73px;
+  }
+}
+
+.icosvg-3 {
+  svg {
+    width: 86px;
+    height: 76px;
+  }
+}
+
 //end advantages
 
 //start author
 
-
+.author {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    background-color: $green;
+    max-width: 653px;
+    width: 100%;
+    min-height: 216px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #fff;
+    margin-right: 45px;
+    max-width: 260px;
+    span {
+      @include f700;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 36px;
+    color: $bg;
+    display: block;
+    background-color: #fff;
+    padding: 14px 40px;
+    height: 63px;
+  }
+}
 
 //end author
